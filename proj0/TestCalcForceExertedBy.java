@@ -1,5 +1,7 @@
 import java.math.*;
 
+import javax.swing.text.PlainDocument;
+
 /**
  *  Tests calcForceExertedBy
  */
@@ -38,8 +40,12 @@ public class TestCalcForceExertedBy {
         Planet p1 = new Planet(1.0, 1.0, 3.0, 4.0, 5.0, "jupiter.gif");
         Planet p2 = new Planet(2.0, 1.0, 3.0, 4.0, 4e11, "jupiter.gif");
         Planet p3 = new Planet(4.0, 5.0, 3.0, 4.0, 5.0, "jupiter.gif");
+        Planet samh = new Planet(1.0, 0.0, 1.0, 1.0, 10.0, "jupiter.gif");
+        Planet aegir = new Planet(3.0, 3.0, 1.0, 1.0, 5.0, "jupiter.gif");
+        Planet rocinante = new Planet(5.0, -3.0, 1.0, 1.0, 50.0, "jupiter.gif");
 
         checkEquals(p1.calcForceExertedBy(p2), 133.4, "calcForceExertedBy()", 0.01);
         checkEquals(p1.calcForceExertedBy(p3), 6.67e-11, "calcForceExertedBy()", 0.01);
+        checkEquals(samh.calcForceExertedBy(rocinante), 1.334e-9, "calcForceExertedBy()", 0.01);
     }
 }
