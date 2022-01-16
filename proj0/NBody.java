@@ -32,7 +32,7 @@ public class NBody {
         double radius = readRadius(filename);
         Planet[] planets = readPlanets(filename);
         int planets_num = planets.length;
-        StdDraw.setScale(-3e11, 3e11);
+        StdDraw.setScale(-radius, radius);
         StdDraw.clear();
         StdDraw.enableDoubleBuffering();
         StdDraw.picture(0, 0, backimg);
