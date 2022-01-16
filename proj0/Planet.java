@@ -1,5 +1,3 @@
-import javax.swing.event.PopupMenuListener;
-
 public class Planet {
     double xxPos;
     double yyPos;
@@ -78,6 +76,10 @@ public class Planet {
         this.yyVel += fY / this.mass * dt;
         this.xxPos += this.xxVel * dt;
         this.yyPos += this.yyVel * dt;
+    }
+
+    public void draw() {
+        StdDraw.picture(this.xxPos, this.yyPos, "images/" + this.imgFileName);
     }
 
 }
