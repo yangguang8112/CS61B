@@ -109,6 +109,9 @@ public class IntList {
             A = A.rest;
         }
         if (B == null) {
+            if (A == null) {
+                return null;
+            }
             return res;
         }
         while (B.rest != null) {
