@@ -100,9 +100,6 @@ public class IntList {
      */
     public static IntList catenate(IntList A, IntList B) {
         //TODO:  fill in method
-        if (A == null) {
-            return B;
-        }
         IntList res = new IntList();
         IntList ptr = res;
         while (A != null) {
@@ -110,6 +107,9 @@ public class IntList {
             ptr.rest = new IntList();
             ptr = ptr.rest;
             A = A.rest;
+        }
+        if (B == null) {
+            return res;
         }
         while (B.rest != null) {
             ptr.first = B.first;
