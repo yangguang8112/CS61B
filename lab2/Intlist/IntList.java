@@ -115,13 +115,6 @@ public class IntList {
             return B;
         }
 
-//        while (A_head != null) {
-//            ptr.first = A_head.first;
-//            ptr.rest = new IntList();
-//            ptr = ptr.rest;
-//            A_head = A_head.rest;
-//        }
-
         if (B == null) {
             if (A == null) {
                 return null;
@@ -130,13 +123,6 @@ public class IntList {
         } else {
             ptr.rest = B;
         }
-//        while (B_head.rest != null) {
-//            ptr.first = B_head.first;
-//            ptr.rest = new IntList();
-//            ptr = ptr.rest;
-//            B_head = B_head.rest;
-//        }
-//        ptr.first = B_head.first;
         return res;
     }
 
